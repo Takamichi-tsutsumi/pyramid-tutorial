@@ -63,3 +63,7 @@ target/
 
 # virtual env
 env/
+
+# pycharm
+.idea
+.python-version
