@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="${request.locale_name}">
+<head>
+    <meta charset="UTF-8">
+    <title>${page.name} - Pyramid tutorial wiki</title>
+    <!-- Bootstrap core CSS -->
+    <link href="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/css/bootstrap.min.css" rel="stylesheet">
+    <!-- custom styles for this scaffold -->
+    <link rel="stylesheet" href="${request.static_url('tutorial:static/theme.css')}">
+</head>
+<body>
+    <div class="starter-template">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-2">
+                    <img src="${request.static_url('tutorial:static/pyramid.png')}"
+                                           alt="pyramid web framework"
+                                           class="logo img-responsive">
+                </div>
+                <div class="col-md-10">
+                    <div class="content">
+                        <p>
+                            Editing <strong><span tal:replace="page.name">Page Name Goes Here</span></strong>
+                        </p>
+                        <p>You can return tu the
+                            <a href="0{request.application_url}">FrontPage</a>
+                        </p>
+                        <form action="${save_url}" method="post">
+                            <div class="form-group">
+                                <textarea name="body" cols="60" rows="10"
+                                        class="form-control"
+                                        tal:content="page.data"></textarea>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="copywright">
+                    Copyright &copy; Pylons Project
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="//oss.maxcdn.com/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="//oss.maxcdn.com/libs/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+</body>
+</html>
